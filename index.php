@@ -9,19 +9,45 @@
 <body>
     <?php
     $name = "Dark Matter";
-    $read = true;
+    $read = false;
     $message = "";
 
     if ($read) {
-        $message = "You have read \"<?php echo $name; ?>\"";
+        $message = "You have read \"$name\"";
     }
     else {
-        $message = 'You not have read "<?php echo $name; ?>"';
+        $message = "You have not read \"$name\"";
     }
+
+    $books = ["Dark Matter", "1984", "451F"];
     ?>
 
     <h1>
-        
-    </h1>
+        <?= $message ?>
+    </h1>   
+
+    <ol>
+    <?php 
+    for ($i=0; $i < count($books); $i++) { 
+        ?> <li><?= $books[$i] ?></li><?php
+        // echo "<li>$books[$i]</li>";
+    }
+    ?>
+    </ol>
+
+    <ul>
+        <?php foreach ($books as $book) 
+        {
+            ?> <li><?= $book ?></li><?php
+        }
+        ?>
+    </ul>
+
+    <ol>
+        <?php foreach ($books as $book) : ?>
+            <li><?= $book ?></li>
+        <?php endforeach ?>
+    </ol>
+    
 </body>
 </html>

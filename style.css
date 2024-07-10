@@ -5,3 +5,19 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+
+ol {
+    font-family: sans-serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ul {
+    font-family: sans-serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
